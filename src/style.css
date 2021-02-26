@@ -1,0 +1,40 @@
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+  line-height: 1.4;
+}
+
+#root {
+  display: grid;
+  place-content: center;
+}
+
+main {
+  max-width: 33em;
+}
+
+button {
+  all: unset;
+  color: blue;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+button:focus-visible {
+  outline: -webkit-focus-ring-color auto 1px;
+}
+
+.posts-list {
+  all: unset;
+  list-style-type: none;
+  text-transform: capitalize;
+}
+
+.posts-list li {
+  margin: 0.7em 0;
+}
+
+.visited {
+  font-weight: bold;
+  color: green;
+}
