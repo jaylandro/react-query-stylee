@@ -1,4 +1,3 @@
-/* eslint-disable jsx-a11y/anchor-is-valid */
 import React from "react";
 import ReactDOM from "react-dom";
 import axios from "axios";
@@ -62,7 +61,7 @@ function Posts({ setPostId }) {
       ) : status === "error" ? (
         <code>Error: {error.message}</code>
       ) : (
-        <>
+        <nav>
           <ul className="posts-list">
             {data.map((post) => (
               <li key={post.id}>
@@ -79,7 +78,7 @@ function Posts({ setPostId }) {
           </ul>
 
           {isFetching && "Background Updating..."}
-        </>
+        </nav>
       )}
     </>
   );
@@ -103,7 +102,6 @@ function Post({ postId, setPostId }) {
 
   return (
     <article>
-      <button onClick={() => setPostId(-1)}>← Back</button>
       {!postId || status === "loading" ? (
         <h1>"Loading..."</h1>
       ) : status === "error" ? (
@@ -115,6 +113,7 @@ function Post({ postId, setPostId }) {
           {isFetching && "Background Updating..."}
         </>
       )}
+      <button onClick={() => setPostId(-1)}>← Back</button>
     </article>
   );
 }
