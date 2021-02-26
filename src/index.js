@@ -33,7 +33,7 @@ function App() {
         ) : (
           <Posts setPostId={setPostId} />
         )}
-        {/* <ReactQueryDevtools initialIsOpen /> */}
+        <ReactQueryDevtools initialIsOpen />
       </main>
     </QueryClientProvider>
   );
